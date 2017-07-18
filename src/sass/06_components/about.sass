@@ -1,0 +1,41 @@
+.c-aboutItem, .c-aboutItem--light
+  height: 100vh
+  background-color: #282828
+  z-index: -1
+  margin: 0px
+  width: 100%
+  max-width: 100%
+  overflow: hidden
+
+  &--light
+    background-color: #232323
+
+  &__content
+    align-self: flex-end
+
+  &__column
+    display: flex
+
+  &__dot
+    color: $mainColor
+
+  &__welcome
+    color: $white
+    font-size: $font__size--headline
+    text-transform: uppercase
+    line-height: 1
+    letter-spacing: 2px
+
+  &__text
+    color: $white
+    letter-spacing: 1px
+    font-size: $font__size--text
+
+  &__image
+    margin-left: auto
+    width: 500px
+    transition: transform 500ms ease-in-out
+    // margin-right: 50px
+
+    &:hover
+      transform: scale(1.02)

@@ -1,0 +1,406 @@
+{
+  "items": [
+    {
+      "name": "Ventus Windpark",
+      "color": "#282828",
+      "month": "July",
+      "year": 2017,
+      "job": "Lead Frontend Developer",
+      "image": "mask.png",
+      "images": [],
+      "baseStyles": {
+        "font": [
+          {
+            "family": "Roboto",
+            "img": "Ventus/fonts/roboto.svg"
+          }
+        ],
+        "colors": [
+          "#056487",
+          "#BBB",
+          "#2a2a2a",
+          "#FF5E5E",
+          "#FF9233",
+          "#FFdd00"
+        ]
+      },
+      "teammembers": [
+        {
+          "name": "Lilia Kraft",
+          "url": ""
+        },
+        {
+          "name": "Katrin Riedelbauch",
+          "url": "http://www.kr-designbox.com/"
+        },
+        {
+          "name": "Nicole Weiß",
+          "url": ""
+        },
+        {
+          "name": "Lukas Fornaro",
+          "url": "http://www.fornaro.de/"
+        },
+        {
+          "name": "Konrad Koppenborg",
+          "url": ""
+        }
+      ],
+      "teaser": "Together with Siemens a project team at Hochschule Augsburg created a web application for monitoring all windparks which are managed by Siemens. The application is able to track and visualize the power production and provide informations about factors influencing it.",
+      "sort": {
+        "code": true,
+        "conception": false,
+        "design": false
+      }
+    },
+    {
+      "name": "mensa.augsburg.de",
+      "color": "#232323",
+      "month": "June",
+      "year": 2017,
+      "job": "UI|UX Design, Conception, Development",
+      "image": "mask.png",
+      "extra": {
+        "url": "http://www.mensa-augsburg.de",
+        "name": "View it live"
+      },
+      "images": [],
+      "baseStyles": {
+        "font": [
+          {
+            "family": "Roboto Condensed",
+            "img": "Mensa/fonts/roboto.svg"
+          }
+        ],
+        "colors": [
+          "#00677f",
+          "#d54b58",
+          "#282828"
+        ]
+      },
+      "teammembers": [
+        {
+          "name": "Johannes Berthel",
+          "url": ""
+        },
+        {
+          "name": "Maximilian Schöberl",
+          "url": ""
+        }
+      ],
+      "teaser": "Together with Siemens a project team at Hochschule Augsburg created a web application for monitoring all windparks which are managed by Siemens. The application is able to track and visualize the power production and provide informations about factors influencing it.",
+      "sort": {
+        "code": true,
+        "conception": true,
+        "design": true
+      }
+    },
+    {
+      "name": "PulseNav",
+      "color": "#282828",
+      "month": "Feburary",
+      "year": 2017,
+      "job": "UI|UX Design, Conception, Development",
+      "image": "teaser4.png",
+      "videos": ["https://player.vimeo.com/video/225816468"],
+      "images": ["Pulse/Image_1.jpg", "Pulse/Image_2.jpg", "Pulse/Image_3.jpg", "Pulse/one_motor.jpg", "Pulse/three_motors.jpg"],
+      "baseStyles": {
+        "font": [
+          {
+            "family": "Univers Condensed",
+            "img": "Pulse/fonts/Univers.svg"
+          }
+        ],
+        "colors": [
+          "#F70B91",
+          "#959595",
+          "#282828",
+          "#020202"
+        ]
+      },
+      "downloads": [
+        {
+          "name": "Thesis",
+          "url": "https://www.dropbox.com/s/gyp3fmcdq44250o/Thesis_Hendrik_Cammann.pdf?dl=0"
+        },
+        {
+          "name": "Slides",
+          "url": "https://www.dropbox.com/s/8tz9zsuen2l78td/TdM_Vortrag.pdf?dl=0"
+        }
+      ],
+      "teaser": "Together with Siemens a project team at Hochschule Augsburg created a web application for monitoring all windparks which are managed by Siemens. The application is able to track and visualize the power production and provide informations about factors influencing it.",
+      "sort": {
+        "code": true,
+        "conception": true,
+        "design": false
+      }
+    },
+    {
+      "name": "SenioFlix",
+      "color": "#232323",
+      "month": "December",
+      "year": 2016,
+      "job": "UI|UX Design, Conception",
+      "image": "teaser5.png",
+      "extra": {
+        "url": "http://www.dev.hendrikcammann.de/SenioFlix",
+        "name": "Try the prototype"
+      },
+      "images": ["SenioFlix/1.png", "SenioFlix/2.png", "SenioFlix/3.png", "SenioFlix/4.png", "SenioFlix/5.png"],
+      "baseStyles": {
+        "font": [
+          {
+            "family": "Roboto",
+            "img": "SenioFlix/fonts/roboto.svg"
+          },
+          {
+            "family": "Playfair Display",
+            "img": "SenioFlix/fonts/play.svg"
+          }
+        ],
+        "colors": [
+          "#CC9C17",
+          "#282828",
+          "#610D21",
+          "#921331"
+        ]
+      },
+      "teammembers": [
+        {
+          "name": "Johannes Schiel",
+          "url": "http://www.unleashed-design.de/"
+        }
+      ],
+      "downloads": [
+        {
+          "name": "Slides",
+          "url": "https://www.dropbox.com/s/9kbey5191vwkmuk/Vortrag_PDF.pdf?dl=0"
+        }
+      ],
+      "teaser": "Together with Siemens a project team at Hochschule Augsburg created a web application for monitoring all windparks which are managed by Siemens. The application is able to track and visualize the power production and provide informations about factors influencing it.",
+      "sort": {
+        "code": false,
+        "conception": true,
+        "design": true
+      }
+    },
+    {
+      "name": "DM World",
+      "color": "#282828",
+      "month": "Feburary",
+      "year": 2016,
+      "job": "UI|UX Design, Conception",
+      "image": "teaser.png",
+      "images": ["DMWorld/home.png"],
+      "baseStyles": {
+        "font": [
+          {
+            "family": "Roboto",
+            "img": "DMWorld/fonts/roboto.svg"
+          }
+        ],
+        "colors": [
+          "#373737",
+          "#5c5c5c",
+          "#567811",
+          "#719e16",
+          "#8cc51c"
+        ]
+      },
+      "teammembers": [
+        {
+          "name": "Maike Baumer",
+          "url": ""
+        },
+        {
+          "name": "Jennifer Gerbl",
+          "url": ""
+        },
+        {
+          "name": "Alexandra Hefter",
+          "url": "http://www.alexandra-hefter.de/"
+        },
+        {
+          "name": "Nicolas Ebi",
+          "url": ""
+        },
+        {
+          "name": "Janek Steinke",
+          "url": "http://www.janeksteinke.de/"
+        }
+      ],
+      "teaser": "Together with Siemens a project team at Hochschule Augsburg created a web application for monitoring all windparks which are managed by Siemens. The application is able to track and visualize the power production and provide informations about factors influencing it.",
+      "sort": {
+        "code": false,
+        "conception": true,
+        "design": true
+      }
+    },
+    {
+      "name": "Forest Moods",
+      "color": "#232323",
+      "month": "Feburary",
+      "year": 2016,
+      "job": "UI|UX Design, Conception",
+      "image": "teaser2.png",
+      "extra": {
+        "url": "http://www.annual-multimedia.de/",
+        "name": "Nominated for the 2017 Annual Multimedia Award"
+      },
+      "videos": ["https://player.vimeo.com/video/225818195"],
+      "images": ["ForestMoods/Image1.jpg", "ForestMoods/Image2.jpg", "ForestMoods/Image3.jpg", "ForestMoods/Image4.jpg"],
+      "baseStyles": {
+        "font": [
+          {
+            "family": "Univers Condensed",
+            "img": "ForestMoods/fonts/Univers.svg"
+          }
+        ],
+        "colors": [
+          "#484848",
+          "#cd2c06",
+          "#e9a307",
+          "#4b7d00"
+        ]
+      },
+      "teammembers": [
+        {
+          "name": "Benjamin Blumer",
+          "url": ""
+        },
+        {
+          "name": "Matthias Bröhl",
+          "url": ""
+        },
+        {
+          "name": "Julian Hauser",
+          "url": ""
+        },
+        {
+          "name": "Kevin Schulz",
+          "url": ""
+        }
+      ],
+      "downloads": [
+        {
+          "name": "Pitch-Slides",
+          "url": "https://www.dropbox.com/s/ravld1y4hfbkyxj/160109_Abschlusspr%C3%A4sentation.pdf?dl=0"
+        }
+      ],
+      "teaser": "Together with Siemens a project team at Hochschule Augsburg created a web application for monitoring all windparks which are managed by Siemens. The application is able to track and visualize the power production and provide informations about factors influencing it.",
+      "sort": {
+        "code": false,
+        "conception": true,
+        "design": true
+      }
+    },
+    {
+      "name": "Jai.Thai-Massage",
+      "color": "#282828",
+      "month": "January",
+      "year": 2016,
+      "job": "UI|UX Design, Conception, Development",
+      "image": "teaser.png",
+      "extra": {
+        "url": "http://www.jai-thaimassage.de/",
+        "name": "View it live"
+      },
+      "images": [],
+      "baseStyles": {
+        "font": [
+          {
+            "family": "Oswald",
+            "img": "Jai/fonts/oswald.svg"
+          }
+        ],
+        "colors": [
+          "#c50993",
+          "#ffffff",
+          "#282828"
+        ]
+      },
+      "teaser": "Together with Siemens a project team at Hochschule Augsburg created a web application for monitoring all windparks which are managed by Siemens. The application is able to track and visualize the power production and provide informations about factors influencing it.",
+      "sort": {
+        "code": true,
+        "conception": true,
+        "design": true
+      }
+    },
+    {
+      "name": "Infinitum-Shattrath",
+      "color": "#232323",
+      "month": "January",
+      "year": 2016,
+      "job": "UI|UX Design, Conception, Development",
+      "image": "teaser.png",
+      "extra": {
+        "url": "http://www.Infinitum-Shattrath.de",
+        "name": "View it live"
+      },
+      "images": ["Infinitum/Image_1.png", "Infinitum/Image_2.png"],
+      "baseStyles": {
+        "font": [
+          {
+            "family": "Open Sans",
+            "img": "Infinitum/fonts/opensans.svg"
+          }
+        ],
+        "colors": [
+          "#006400",
+          "#666666",
+          "#999999"
+        ]
+      },
+      "teaser": "Together with Siemens a project team at Hochschule Augsburg created a web application for monitoring all windparks which are managed by Siemens. The application is able to track and visualize the power production and provide informations about factors influencing it.",
+      "sort": {
+        "code": true,
+        "conception": true,
+        "design": true
+      }
+    },
+    {
+      "name": "Picturies",
+      "color": "#282828",
+      "month": "July",
+      "year": 2015,
+      "job": "UI|UX Design, Conception, Development",
+      "image": "teaser3.png",
+      "images": ["Picturies/image1.jpg", "Picturies/image2.jpg", "Picturies/image3.jpg", "Picturies/image4.jpg", "Picturies/image5.jpg"],
+      "baseStyles": {
+        "font": [
+          {
+            "family": "Roboto Condensed",
+            "img": "Picturies/fonts/roboto.svg"
+          }
+        ],
+        "colors": [
+          "#94003d",
+          "#fffff",
+          "#eeeeee"
+        ]
+      },
+      "teammembers": [
+        {
+          "name": "Jennifer Gerbl",
+          "url": ""
+        }
+      ],
+      "downloads": [
+        {
+          "name": "Concept",
+          "url": "https://www.dropbox.com/s/870dp3vuq5c17ls/Picturies_Konzept_EMAMA_SS2015_Jennifer_Gerbl_Hendrik_Cammann.pdf?dl=0"
+        },
+        {
+          "name": ".apk",
+          "url": "https://www.dropbox.com/s/r5xy05rl6xuqhsk/picturies.apk?dl=0"
+        }
+      ],
+      "teaser": "Together with Siemens a project team at Hochschule Augsburg created a web application for monitoring all windparks which are managed by Siemens. The application is able to track and visualize the power production and provide informations about factors influencing it.",
+      "sort": {
+        "code": true,
+        "conception": true,
+        "design": true
+      }
+    }
+  ]
+}

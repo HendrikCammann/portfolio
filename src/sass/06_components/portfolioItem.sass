@@ -1,0 +1,54 @@
+.c-portfolioItem
+  height: 100vh
+  // background-color: #282828
+  z-index: -1
+  margin: 0px
+  width: 100%
+  max-width: 100%
+  overflow: hidden
+
+.c-portfolioItem__dot
+  color: $mainColor
+
+.c-portfolioItem__column
+  display: flex
+
+.c-portfolioItem__content
+  align-self: flex-end
+
+.c-portfolioItem__teaserText, .c-portfolioItem__job, .c-portfolioItem__project, .c-portfolioItem__year, .c-portfolioItem__readMore
+  color: $white
+  letter-spacing: 1px
+  font-size: $font__size--text
+
+.c-portfolioItem__job, .c-portfolioItem__project
+  letter-spacing: 2px
+
+.c-portfolioItem__project
+  font-size: $font__size--headline
+  text-transform: uppercase
+  line-height: 1
+
+.c-portfolioItem__year
+  font-size: $font__size--large
+  line-height: 1
+  margin-top: 80px
+  //color: $mainColor
+
+.c-portfolioItem__readMore
+  color: $white
+  // border-bottom: 1px solid $white
+  display: inline-block
+
+  &:hover
+    cursor: pointer
+    // border-bottom: 1px solid $mainColor
+    color: $mainColor
+
+  & span
+    color: $mainColor
+
+.c-porfolioItem__image
+  // height: 70%
+  margin-left: auto
+  margin-right: 50px
