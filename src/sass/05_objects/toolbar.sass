@@ -1,0 +1,22 @@
+.o-toolbar
+  width: 60px
+  position: fixed
+  margin-top: 43vh
+  margin-left: 20px
+
+  @media print
+    display: none
+
+  &__icon
+    height: 50px
+    margin-left: 5px
+    margin-right: 5px
+    transition: all 300ms ease-in-out
+
+    &--active
+      background-color: $mainColor
+
+    &:hover
+      // background-color: $mainColor
+      transform: scale(1.15)
+      background-color: $mainColor

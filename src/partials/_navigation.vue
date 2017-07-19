@@ -1,5 +1,5 @@
 <template>
-  <div class="hero-head o-navigation">
+  <div class="hero-head o-navigation hide-in-print">
     <header class="nav">
         <div class="nav-left">
           <a @click="goHome" class="nav-item">

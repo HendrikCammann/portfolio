@@ -17,6 +17,7 @@
     "lazyloadxt": "^1.1.0",
     "require-dir": "^0.3.2",
     "require-directory": "^2.1.1",
+    "social-share-js": "^1.0.4",
     "vue": "^2.3.3",
     "vue-lazyload": "^1.0.6",
     "vue-router": "^2.3.1",

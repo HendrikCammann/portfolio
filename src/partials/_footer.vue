@@ -1,9 +1,9 @@
 <template>
-  <div o-footer style="box-shadow: 0 -1px 0 rgba(219, 219, 219, 0.3)">
+  <div o-footer style="box-shadow: 0 -1px 0 rgba(219, 219, 219, 0.3)" class="hide-in-print">
     <header class="nav">
         <div class="nav-left">
           <a class="nav-item">
-            <h2 class="subtitle o-footer__linkImp">
+            <h2 class="subtitle o-footer__linkImp" @click="openImpressum">
               {{ impressum }}<span class="o-background__dot">.</span>
             </h2>
           </a>
@@ -11,7 +11,7 @@
         <div class="nav-right">
           <a class="nav-item">
             <h2 class="subtitle o-footer__linkTest">
-              {{ impressum }}<span class="o-background__dot">.</span>
+              &copy; {{ copyright }}<span class="o-background__dot">.</span>
             </h2>
           </a>
         </div>
@@ -22,8 +22,21 @@
   export default {
     data () {
       return {
-        impressum: 'Impressum'
+        impressum: 'Impressum',
+        copyright: null
       }
+    },
+    methods: {
+      openImpressum () {
+        this.$router.push({
+          path: '/impressum'
+        });
+      }
+    },
+    created () {
+      let tempDate = new Date()
+      let tempYear = tempDate.getFullYear()
+      this.copyright = 	' Hendrik Cammann 2015-' + tempYear
     }
   }
 </script>

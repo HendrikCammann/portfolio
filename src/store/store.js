@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import _ from 'underscore';
 
 Vue.use(Vuex);
 
@@ -38,6 +37,7 @@ export const store = new Vuex.Store({
   state: {
     // projects: PortfolioItems.items,
     projectsContentful: portfolioItemsContentful,
+    actualProject: null,
     appState: {
       showNavBar: false
     }

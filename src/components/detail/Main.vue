@@ -5,19 +5,22 @@
         <app-navigation v-show="this.$store.state.appState.showNavBar"></app-navigation>
       </transition>
       <app-background :title="item.name" :subtitle="item.job" :needMarginBottom="false"></app-background>
+      <transition name="fade">
+        <app-tools v-show="showTools"></app-tools>
+      </transition>
     </section>
     <section class="c-detail__container">
       <div class="container">
         <div class="columns max-width">
             <div class="column is-9">
-              <div v-if="item.videos != null || item.videos != undefined" v-for="video in item.videos" class="c-detail__video--wrapper">
+              <div v-if="item.videos != null || item.videos != undefined" v-for="video in item.videos" class="c-detail__video--wrapper hide-in-print">
                 <iframe :src="video + '?color=ffffff&&title=0&byline=0&portrait=0'" frameborder="0" allowfullscreen></iframe>
               </div>
               <img class="o-box__shadow margin__bottom--7" v-for="img in item.detailImages" v-lazy="img.fields.file.url" :data-srcset="img.fields.file.url"/>
             </div>
             <div class="column is-3">
               <div class="columns is-multiline margin__top--200">
-                <div v-if="item.extraInformations != null || item.extraInformations != undefined" class="column is-12 c-detail__baseStyles has-text-centered o-box__shadow">
+                <div v-if="item.extraInformations != null || item.extraInformations != undefined" class="column is-12 c-detail__baseStyles has-text-centered o-box__shadow hide-in-print">
                   <a target="_blank" :href="item.extraInformations.url" class="c-detail__baseStyles--url font--bold">{{ item.extraInformations.name }}!</a>
                 </div>
                 <div class="column is-12 c-detail__baseStyles has-text-centered o-box__shadow">
@@ -45,7 +48,7 @@
                   <div v-for="color in item.baseStyles.colors" class="testcolor" v-bind:style="{backgroundColor: color}">
                   </div>
                 </div>
-                <div v-if="item.downloads != null || item.downloads != undefined" class="column is-12 c-detail__baseStyles has-text-centered o-box__shadow">
+                <div v-if="item.downloads != null || item.downloads != undefined" class="column is-12 c-detail__baseStyles has-text-centered o-box__shadow hide-in-print">
                   <p class="c-detail__baseStyles--headline font--bold">Downloads</p>
                   <a target="_blank" v-for="item in item.downloads"class="c-detail__download--item has-text-centered font--light" :href="item.url">
                     <img class="c-detail__download--icon" src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/12.File-512.png" /> <br />
@@ -65,6 +68,7 @@
   import _background from '../../partials/_background.vue'
   import _navigation from '../../partials/_navigation.vue'
   import _footer from '../../partials/_footer.vue'
+  import _tools from '../../partials/_tools.vue'
   import $ from 'jquery'
   // import _lazy from 'lazyloadxt'
   import { eventBus } from '../../main.js'
@@ -73,16 +77,34 @@
       return {
         item: null,
         animation: 'slide-down',
+        showTools: false
       }
     },
     components: {
       appBackground: _background,
       appNavigation: _navigation,
+      appTools: _tools,
       appFooter: _footer
     },
     methods: {
       showMenuFunc () {
         this.$store.getters.showNavBar;
+      },
+      toggleTools () {
+        if (window.scrollY > this.lastScroll) {
+          if (window.scrollY < 900) {
+            this.showTools = false
+          } else {
+            this.showTools = true
+          }
+        } else {
+          if (window.scrollY < 500) {
+            this.showTools = false
+          } else {
+            this.showTools = true
+          }
+        }
+        this.lastScroll = window.scrollY
       }
     },
     created() {
@@ -116,6 +138,9 @@
           portfolioItemsContentful.reverse();
 
           that.$store.state.projectsContentful = portfolioItemsContentful
+
+          window.addEventListener('scroll', that.toggleTools);
+
           eventBus.$on('navigationEvent', () => {
             that.animation = 'slide-up';
             that.$store.getters.hideNavBar;
@@ -128,11 +153,14 @@
             let tempName = that.$store.state.projectsContentful[i].name.replace(/\s/g, '');
             if(tempName === that.$route.params.itemName) {
               that.item = that.$store.state.projectsContentful[i];
+              that.$store.state.actualProject = that.item;
               // this.item.detailImages = require('../../assets/SenioFlix');
             }
           }
         })
       } else {
+        window.addEventListener('scroll', this.toggleTools);
+
         eventBus.$on('navigationEvent', () => {
           this.animation = 'slide-up';
           this.$store.getters.hideNavBar;
@@ -145,6 +173,7 @@
           let tempName = this.$store.state.projectsContentful[i].name.replace(/\s/g, '');
           if(tempName === this.$route.params.itemName) {
             this.item = this.$store.state.projectsContentful[i];
+            this.$store.state.actualProject = this.item;
             // this.item.detailImages = require('../../assets/SenioFlix');
           }
         }

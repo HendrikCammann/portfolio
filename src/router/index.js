@@ -4,11 +4,13 @@ import Home from '@/components/home/Main';
 import Work from '@/components/work/Main';
 import About from '@/components/about/Main';
 import Detail from '@/components/detail/Main';
+import Impressum from '@/components/impressum/Main';
 
 
 Vue.use(Router);
 
 export default new Router({
+  // mode: 'history',
   routes: [
     {
       path: '/',
@@ -24,6 +26,11 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: About,
+    },
+    {
+      path: '/impressum',
+      name: 'impressum',
+      component: Impressum,
     },
     {
       path: '/project/:itemName',
