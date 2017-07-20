@@ -29,40 +29,11 @@
         <div class="container s-is-fullheight">
           <div class="columns">
             <div class="column">
-              <h4 class="c-portfolioItem__year font--bold margin__bottom--10">Skills<span class="c-portfolioItem__dot">.</span></h4>
-            </div>
-          </div>
-          <div class="columns s-is-fullheight">
-            <div class="column is-12 c-aboutItem__column has-text-centered">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="c-aboutItem">
-        <div class="container s-is-fullheight">
-          <div class="columns">
-            <div class="column">
-              <h4 class="c-portfolioItem__year font--bold margin__bottom--10">Clients<span class="c-portfolioItem__dot">.</span></h4>
-            </div>
-          </div>
-          <div class="columns s-is-fullheight">
-            <div class="column is-12 c-aboutItem__column has-text-centered">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="c-aboutItem--light">
-        <div class="container s-is-fullheight">
-          <div class="columns">
-            <div class="column">
               <h4 class="c-portfolioItem__year font--bold margin__bottom--10">Contact<span class="c-portfolioItem__dot">.</span></h4>
             </div>
           </div>
           <div class="columns s-is-fullheight">
-            <div class="column is-12 c-aboutItem__column has-text-centered">
-            </div>
+            <app-contact-item v-for="item in contactItems" :key="item.name" :image="item.img" :name="item.name" :options="item.options"></app-contact-item>
           </div>
         </div>
       </div>
@@ -75,6 +46,7 @@
   import _background from '../../partials/_background.vue'
   import _navigation from '../../partials/_navigation.vue'
   import _footer from '../../partials/_footer.vue'
+  import _contactItem from '../../partials/_contactItem.vue'
   import { eventBus } from '../../main.js'
 
   export default {
@@ -83,12 +55,74 @@
         pageTitle: 'about',
         pageSubTitle: ' ',
         showMenu: false,
-        animation: 'slide-down'
+        animation: 'slide-down',
+        contactItems: [
+          {
+            name: 'Phone',
+            img: 'Phone.svg',
+            options: [
+              {
+                name: 'mobile',
+                value: '1234 4567 890',
+                link: null
+              },
+              {
+                name: 'skype',
+                value: 'cablol',
+                link: ''
+              }
+            ]
+          },
+          {
+            name: 'Social Media',
+            img: 'Social.svg',
+            options: [
+              {
+                name: 'facebook',
+                value: 'Hendrik Cammann',
+                target: '_blank',
+                link: 'https://www.facebook.com/hendrik.cammann'
+              },
+              {
+                name: 'xing',
+                value: 'Hendrik Cammann',
+                target: '_blank',
+                link: 'https://www.xing.com/profile/Hendrik_Cammann'
+              },
+              {
+                name: 'linkedin',
+                value: 'Hendrik Cammann',
+                target: '_blank',
+                link: 'https://www.linkedin.com/in/hendrik-cammann-18744511a/'
+              }
+            ]
+          },
+          {
+            name: 'Mail',
+            img: 'Mail_white.svg',
+            options: [
+              {
+                name: 'business',
+                value: 'mail@hendrikcammann.de',
+                target: '_self',
+                link: 'mailto:mail@hendrikcammann.de?subject=contact%20request'
+
+              },
+              {
+                name: 'university',
+                value: 'hendrik.cammann@hs-augsburg.de',
+                target: '_self',
+                link: 'mailto:hendrik.cammann@hs-augsburg.de?subject=contact%20request'
+              }
+            ]
+          }
+        ]
       };
     },
     components: {
       appBackground: _background,
       appNavigation: _navigation,
+      appContactItem: _contactItem,
       appFooter: _footer
     },
     methods: {

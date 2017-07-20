@@ -12,6 +12,8 @@
 
   &__content
     align-self: flex-end
+    margin: auto
+    text-align: center
 
   &__column
     display: flex
@@ -39,3 +41,26 @@
 
     &:hover
       transform: scale(1.02)
+
+.c-about
+
+  &__contact
+
+    &--text
+      color: $white
+
+      & a
+        color: $white
+
+        &:hover
+          color: $mainColor
+
+    &--img
+      width: 48px
+      display: inline-flex
+      vertical-align: top
+
+  &__headline h3
+    display: inline-block
+    color: $white
+    font-family: $font__secondary

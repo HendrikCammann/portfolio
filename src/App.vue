@@ -53,6 +53,7 @@ export default {
 
 <style lang="sass">
 @import 'sass/00_vendor/bulma.css'
+// @import 'sass/00_vendor/onepage-scroll.css'
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700')
 @import url('https://fonts.googleapis.com/css?family=Pacifico')
 @import 'sass/01_settings/colors.sass'

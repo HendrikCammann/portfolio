@@ -22,7 +22,7 @@
   export default {
     data () {
       return {
-        impressum: 'Impressum',
+        impressum: 'imprint',
         copyright: null
       }
     },
@@ -36,7 +36,7 @@
     created () {
       let tempDate = new Date()
       let tempYear = tempDate.getFullYear()
-      this.copyright = 	' Hendrik Cammann 2015-' + tempYear
+      this.copyright = ' hendrik cammann 2015-' + tempYear
     }
   }
 </script>

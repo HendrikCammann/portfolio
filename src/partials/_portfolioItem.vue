@@ -1,5 +1,5 @@
 <template>
-  <div class="c-portfolioItem" v-bind:style="{backgroundColor: bgColor}">
+  <div class="c-portfolioItem scrollTarget" v-bind:style="{backgroundColor: bgColor}">
     <div class="container s-is-fullheight">
       <div class="columns">
         <div class="column">

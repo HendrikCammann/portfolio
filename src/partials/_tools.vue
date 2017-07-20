@@ -18,7 +18,7 @@
       return {
         emailText: 'Hey check out the ' + this.$route.params.itemName + ' project by Hendrik Cammann',
         emailBody: 'Hey! Check out this project ',
-        emailLink: null,
+        // emailLink: null,
         facebookShare: null,
         twitterShare: null,
         pinterestShare: null,
@@ -32,7 +32,7 @@
             window.print()
           case 'share':
             this.showShare = !this.showShare
-            console.log(this.emailLink)
+            console.log(window.location.href)
             // window.open('http://twitter.com/share?url='+encodeURIComponent(this.emailLink)+'&text='+encodeURIComponent('ji'), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
             break;
           case 'mail':
@@ -50,12 +50,12 @@
       }
     },
     created () {
-      this.emailLink = 'http://www.dev.hendrikcammann.de/testPf/#' + this.$route.fullPath;
-      this.facebookShare = 'http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.emailLink) +'&amp;caption=' + this.emailBody
-      this.pinterestShare = 'http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(this.emailLink) + '&amp;media=' + this.$store.state.actualProject.teaserImage.fields.file.url + '&amp;description=' + 'Check out the ' + this.$store.state.actualProject.name + ' project by Hendrik Cammann'
-      this.twitterShare = 'https://twitter.com/share?url=' + encodeURIComponent(this.emailLink) + '&amp;text=' + encodeURIComponent('Check out this project by @hendrikcammann') + '&amp;hashtags=' + encodeURIComponent('hendrikcammann')
+      // this.emailLink = 'http://www.dev.hendrikcammann.de/testPf/#' + this.$route.fullPath;
+      this.facebookShare = 'http://www.facebook.com/sharer.php?u=' + encodeURIComponent(window.location.href) +'&amp;caption=' + this.emailBody
+      this.pinterestShare = 'http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href) + '&amp;media=' + this.$store.state.actualProject.teaserImage.fields.file.url + '&amp;description=' + 'Check out the ' + this.$store.state.actualProject.name + ' project by Hendrik Cammann'
+      this.twitterShare = 'https://twitter.com/share?url=' + encodeURIComponent(window.location.href) + '&amp;text=' + encodeURIComponent('Check out this project by @hendrikcammann') + '&amp;hashtags=' + encodeURIComponent('hendrikcammann')
       let tempLink = ' by Hendrik Cammann'
-      this.emailBody += this.emailLink + tempLink
+      this.emailBody += window.location.href + tempLink
     }
   }
 </script>

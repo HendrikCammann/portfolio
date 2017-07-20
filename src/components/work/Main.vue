@@ -1,6 +1,6 @@
 <template>
 <div class="absolute-div">
-  <section class="hero is-fullheight o-background">
+  <section class="hero is-fullheight o-background scrollTarget">
     <transition :name="animation">
       <app-navigation v-show="this.$store.state.appState.showNavBar"></app-navigation>
     </transition>
@@ -26,7 +26,7 @@
   import _portfolioItem from '../../partials/_portfolioItem.vue'
   import _sortbar from '../../partials/_sortbar.vue'
   import _footer from '../../partials/_footer.vue'
-
+  require("onepagescroll/jquery.onepage-scroll.min.js")
   import { eventBus } from '../../main.js'
   export default {
     data() {
