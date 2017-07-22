@@ -1,5 +1,12 @@
 <template>
   <div class="absolute-div">
+    <div v-show="showModal" class="modal is-active">
+      <div class="modal-background"></div>
+      <div class="modal-content has-text-centered">
+        <img v-lazy="modalImage" :data-srcset="modalImage"/>
+      </div>
+      <button @click="toggleModal" class="modal-close is-large"></button>
+    </div>
     <section class="hero is-fullheight o-background">
       <transition :name="animation">
         <app-navigation v-show="this.$store.state.appState.showNavBar"></app-navigation>
@@ -16,7 +23,7 @@
               <div v-if="item.videos != null || item.videos != undefined" v-for="video in item.videos" class="c-detail__video--wrapper hide-in-print">
                 <iframe :src="video + '?color=ffffff&&title=0&byline=0&portrait=0'" frameborder="0" allowfullscreen></iframe>
               </div>
-              <img class="o-box__shadow margin__bottom--7" v-for="img in item.detailImages" v-lazy="img.fields.file.url" :data-srcset="img.fields.file.url"/>
+              <img @click="toggleModal($event)" class="o-box__shadow margin__bottom--7" v-for="img in item.detailImages" v-lazy="img.fields.file.url" :data-srcset="img.fields.file.url"/>
             </div>
             <div class="column is-3" id="c-detail__mobile--push">
               <div class="columns is-multiline margin__top--200" id="c-detail__mobile--noMarginTop">
@@ -77,7 +84,9 @@
       return {
         item: null,
         animation: 'slide-down',
-        showTools: false
+        showTools: false,
+        showModal: false,
+        modalImage: null
       }
     },
     components: {
@@ -87,6 +96,13 @@
       appFooter: _footer
     },
     methods: {
+      toggleModal ($event) {
+        console.log($event.toElement.currentSrc)
+        if ($event.toElement.currentSrc) {
+          this.modalImage = $event.toElement.currentSrc
+        }
+        this.showModal = !this.showModal
+      },
       showMenuFunc () {
         this.$store.getters.showNavBar;
       },
