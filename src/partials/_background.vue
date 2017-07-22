@@ -1,6 +1,6 @@
 <template>
     <div class="hero-body" v-bind:class="{ 'margin__bottom--90':needMarginBottom }">
-      <div v-if="leftNav.display == true" @click="navigateLeft" class="is-pulled-left o-background__navigationItem o-background__navigationItem--left">{{ leftNav.name }}<span class="o-background__dot">.</span></div>
+      <div v-if="leftNav.display == true" @click="navigateLeft" class="is-hidden-mobile is-pulled-left o-background__navigationItem o-background__navigationItem--left">{{ leftNav.name }}<span class="o-background__dot">.</span></div>
       <div class="container has-text-centered">
         <h1 class="title o-background__headline">
           {{ title }}<span class="o-background__dot">.</span>
@@ -9,7 +9,7 @@
           {{ subtitle }}<span class="o-background__dot">.</span>
         </h2>
       </div>
-      <div v-if="rightNav.display == true" @click="navigateRight" class="is-pulled-left o-background__navigationItem o-background__navigationItem--right">{{ rightNav.name }}<span class="o-background__dot">.</span></div>
+      <div v-if="rightNav.display == true" @click="navigateRight" class="is-hidden-mobile is-pulled-left o-background__navigationItem o-background__navigationItem--right">{{ rightNav.name }}<span class="o-background__dot">.</span></div>
     </div>
 </template>
 

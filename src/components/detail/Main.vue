@@ -12,14 +12,14 @@
     <section class="c-detail__container">
       <div class="container">
         <div class="columns max-width">
-            <div class="column is-9">
+            <div class="column is-9 c-detail__showcase">
               <div v-if="item.videos != null || item.videos != undefined" v-for="video in item.videos" class="c-detail__video--wrapper hide-in-print">
                 <iframe :src="video + '?color=ffffff&&title=0&byline=0&portrait=0'" frameborder="0" allowfullscreen></iframe>
               </div>
               <img class="o-box__shadow margin__bottom--7" v-for="img in item.detailImages" v-lazy="img.fields.file.url" :data-srcset="img.fields.file.url"/>
             </div>
-            <div class="column is-3">
-              <div class="columns is-multiline margin__top--200">
+            <div class="column is-3" id="c-detail__mobile--push">
+              <div class="columns is-multiline margin__top--200" id="c-detail__mobile--noMarginTop">
                 <div v-if="item.extraInformations != null || item.extraInformations != undefined" class="column is-12 c-detail__baseStyles has-text-centered o-box__shadow hide-in-print">
                   <a target="_blank" :href="item.extraInformations.url" class="c-detail__baseStyles--url font--bold">{{ item.extraInformations.name }}!</a>
                 </div>

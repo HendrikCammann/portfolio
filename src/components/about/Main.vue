@@ -29,6 +29,22 @@
         <div class="container s-is-fullheight">
           <div class="columns">
             <div class="column">
+              <h4 class="c-portfolioItem__year font--bold margin__bottom--10">Skills<span class="c-portfolioItem__dot">.</span></h4>
+            </div>
+          </div>
+          <div class="columns s-is-fullheight is-multiline">
+            <app-skill-item v-for="item in skillItems" :key="item.name" :image="item.img" :name="item.name" :text="item.text"></app-skill-item>
+            <div class="column is-12">
+                daskdsjakdjaskdajds
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-aboutItem">
+        <div class="container s-is-fullheight">
+          <div class="columns">
+            <div class="column">
               <h4 class="c-portfolioItem__year font--bold margin__bottom--10">Contact<span class="c-portfolioItem__dot">.</span></h4>
             </div>
           </div>
@@ -47,6 +63,7 @@
   import _navigation from '../../partials/_navigation.vue'
   import _footer from '../../partials/_footer.vue'
   import _contactItem from '../../partials/_contactItem.vue'
+  import _skillItem from '../../partials/_skillItem.vue'
   import { eventBus } from '../../main.js'
 
   export default {
@@ -116,6 +133,23 @@
               }
             ]
           }
+        ],
+        skillItems: [
+          {
+            name: 'Conception',
+            img: 'conception_white.svg',
+            text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+          },
+          {
+            name: 'Webdesign',
+            img: 'design_white.svg',
+            text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+          },
+          {
+            name: 'Development',
+            img: 'Code_white.svg',
+            text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+          }
         ]
       };
     },
@@ -123,6 +157,7 @@
       appBackground: _background,
       appNavigation: _navigation,
       appContactItem: _contactItem,
+      appSkillItem: _skillItem,
       appFooter: _footer
     },
     methods: {
