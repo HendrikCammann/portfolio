@@ -71,4 +71,6 @@ export default {
 @import 'sass/06_components/portfolioItem.sass'
 @import 'sass/06_components/about.sass'
 @import 'sass/06_components/detail.sass'
+@import 'sass/06_components/imprint.sass'
+
 </style>

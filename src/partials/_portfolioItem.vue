@@ -6,15 +6,15 @@
           <h4 class="c-portfolioItem__year font--bold margin__bottom--10"><small>{{ month }}</small> {{ year }}<span class="c-portfolioItem__dot">.</span></h4>
         </div>
       </div>
-      <div class="columns s-is-fullheight">
+      <div class="columns s-is-fullheight test23">
         <div class="column is-5 c-portfolioItem__column">
           <div class="c-portfolioItem__content margin__bottom--240">
             <h6 class="c-portfolioItem__job font--light">{{ job }}<span class="c-portfolioItem__dot">.</span></h6>
             <h2 class="c-portfolioItem__project font--bold margin__bottom--10">{{ project }}<span class="c-portfolioItem__dot">.</span></h2>
-            <p class="c-portfolioItem__teaserText font--light margin__bottom--10">
+            <p class="c-portfolioItem__teaserText font--light margin__bottom--10 is-hidden-mobile">
               {{ teaserText }}
             </p>
-            <p @click="toggleDetailView" class="c-portfolioItem__readMore font--bold">
+            <p @click="toggleDetailView" class="c-portfolioItem__readMore font--bold is-hidden-mobile">
               View project <span>&raquo;</span>
             </p>
             <!--
@@ -27,8 +27,11 @@
           </div>
         </div>
         <div class="column is-7 c-portfolioItem__column">
-          <img class="c-portfolioItem__content c-porfolioItem__image margin__bottom--220" v-lazy="image" :data-srcset="image" />
+          <img @click="toggleDetailView" class="c-portfolioItem__content c-porfolioItem__image margin__bottom--220" v-lazy="image" :data-srcset="image" />
         </div>
+        <p @click="toggleDetailView" class="c-portfolioItem__readMore font--bold is-hidden-desktop">
+          View project <span>&raquo;</span>
+        </p>
       </div>
     </div>
   </div>

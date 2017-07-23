@@ -1,5 +1,5 @@
 <template>
-  <div class="o-sortbar" id="sortbar">
+  <div class="o-sortbar is-hidden-mobile" id="sortbar">
     <transition name="fade">
       <div v-show="error" class="test" v-bind:style="{marginTop: marginTopVal + 'px'}">
         {{ errorText }}

@@ -6,6 +6,10 @@
   width: 100%
   max-width: 100%
   overflow: hidden
+  @media screen and (max-width: 768px)
+    padding-left: 20px
+    padding-right: 20px
+    height: auto
 
 .c-portfolioItem__dot
   color: $mainColor
@@ -15,6 +19,8 @@
 
 .c-portfolioItem__content
   align-self: flex-end
+  @media screen and (max-width: 768px)
+    margin-bottom: 0px !important
 
 .c-portfolioItem__teaserText, .c-portfolioItem__job, .c-portfolioItem__project, .c-portfolioItem__year, .c-portfolioItem__readMore
   color: $white
@@ -24,10 +30,19 @@
 .c-portfolioItem__job, .c-portfolioItem__project
   letter-spacing: 2px
 
+.c-portfolioItem__job
+  @media screen and (max-width: 768px)
+    margin-top: 5px
+    word-break: break-word
+
 .c-portfolioItem__project
   font-size: $font__size--headline
   text-transform: uppercase
   line-height: 1
+  @media screen and (max-width: 768px)
+    margin-top: 5px
+    word-break: break-word
+    font-size: 30px
 
 .c-portfolioItem__year
   font-size: $font__size--large
@@ -39,6 +54,16 @@
   color: $white
   // border-bottom: 1px solid $white
   display: inline-block
+
+  @media screen and (max-width: 768px)
+    margin-left: 10px
+    background-color: $white
+    border-radius: 5px
+    margin-top: 30px
+    margin-bottom: 50px
+    color: $black
+    padding: 10px
+    font-size: 20px
 
   &:hover
     cursor: pointer
@@ -52,3 +77,11 @@
   // height: 70%
   margin-left: auto
   margin-right: 50px
+
+  @media screen and (max-width: 768px)
+    max-height: 350px
+    max-width: 70vw
+    margin-right: auto
+
+  &:hover
+    cursor: pointer
