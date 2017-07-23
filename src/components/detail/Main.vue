@@ -5,7 +5,7 @@
       <div class="modal-content has-text-centered">
         <img v-lazy="modalImage" :data-srcset="modalImage"/>
       </div>
-      <button @click="toggleModal" class="modal-close is-large"></button>
+      <button @click="toggleModal" class="modal-close is-large o-box__shadow"></button>
     </div>
     <section class="hero is-fullheight o-background">
       <transition :name="animation">

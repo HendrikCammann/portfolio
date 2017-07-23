@@ -5,7 +5,7 @@
         <app-navigation v-show="this.$store.state.appState.showNavBar"></app-navigation>
       </transition>
       <div class="container s-is-fullheight margin__top--100">
-        <div class="columns s-is-fullheight is-multiline">
+        <div class="columns s-is-fullheight is-multiline c-imprint__wrapper">
           <div class="column is-12">
             <h5 class="title font__secondary is-5">Editor<span class="o-background__dot">.</span></h5>
             <p>
