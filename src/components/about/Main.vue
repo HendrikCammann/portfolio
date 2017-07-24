@@ -11,7 +11,7 @@
         <div class="container s-is-fullheight">
           <div class="columns s-is-fullheight">
             <div class="colum is-5 c-aboutItem__column">
-              <div class="c-aboutItem__content margin__bottom--240">
+              <div class="c-aboutItem__content margin__bottom--240" id="welcome">
                 <h2 class="c-aboutItem__welcome font--bold margin__bottom--10">i am Hendrik<span class="c-aboutItem__dot">.</span></h2>
                 <p class="c-aboutItem__text font--light margin__bottom--10">
                   a digital designer and developer based in Augsburg
