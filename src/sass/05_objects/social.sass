@@ -1,3 +1,7 @@
+.o-social
+  @media screen and (max-width: 768px)
+    opacity: 0
+
 .o-social__icon
   height: 50px
   margin-left: 5px
@@ -7,3 +11,6 @@
   &:hover
     background-color: $mainColor
     transform: scale(1.15)
+
+  @media screen and (max-width: 768px)
+    pointer-events: none

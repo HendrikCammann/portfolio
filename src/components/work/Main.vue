@@ -8,6 +8,7 @@
     <transition name="fade">
       <app-sortbar v-show="showSort"></app-sortbar>
     </transition>
+    <app-nav></app-nav>
   </section>
   <section>
     <transition-group name="list">
@@ -26,7 +27,8 @@
   import _portfolioItem from '../../partials/_portfolioItem.vue'
   import _sortbar from '../../partials/_sortbar.vue'
   import _footer from '../../partials/_footer.vue'
-  require("onepagescroll/jquery.onepage-scroll.min.js")
+  import _mobileNav from '../../partials/_mobileNav.vue'
+
   import { eventBus } from '../../main.js'
   export default {
     data() {
@@ -57,6 +59,7 @@
       appNavigation: _navigation,
       appPortfolio: _portfolioItem,
       appSortbar: _sortbar,
+      appNav: _mobileNav,
       appFooter: _footer
     },
     methods: {

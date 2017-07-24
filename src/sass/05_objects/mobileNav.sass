@@ -1,0 +1,23 @@
+.o-mobileNav__navigationItem
+  cursor: pointer
+  color: $white
+  margin: 0
+
+  @media print
+    display: none
+
+.o-mobileNav
+  background-color: $white
+  position: fixed
+  bottom: 0
+  width: 100%
+  z-index: 300
+  padding-left: 20px
+  padding-right: 20px
+  box-shadow: 0 -1px 0 rgba(219, 219, 219, 0.3)
+
+  &__item
+    color: $black
+    background-color: $white
+    padding-bottom: 15px
+    padding-top: 15px

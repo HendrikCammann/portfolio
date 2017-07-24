@@ -15,6 +15,7 @@
       <transition name="fade">
         <app-tools v-show="showTools"></app-tools>
       </transition>
+      <app-nav v-show="!showModal"></app-nav>
     </section>
     <section class="c-detail__container">
       <div class="container">
@@ -76,6 +77,8 @@
   import _navigation from '../../partials/_navigation.vue'
   import _footer from '../../partials/_footer.vue'
   import _tools from '../../partials/_tools.vue'
+  import _mobileNav from '../../partials/_mobileNav.vue'
+
   import $ from 'jquery'
   // import _lazy from 'lazyloadxt'
   import { eventBus } from '../../main.js'
@@ -93,6 +96,7 @@
       appBackground: _background,
       appNavigation: _navigation,
       appTools: _tools,
+      appNav: _mobileNav,
       appFooter: _footer
     },
     methods: {

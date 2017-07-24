@@ -1,5 +1,5 @@
 <template>
-  <div o-footer style="box-shadow: 0 -1px 0 rgba(219, 219, 219, 0.3)" class="hide-in-print">
+  <div style="box-shadow: 0 -1px 0 rgba(219, 219, 219, 0.3)" class="hide-in-print o-footer">
     <header class="nav">
         <div class="nav-left">
           <a class="nav-item">

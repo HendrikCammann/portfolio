@@ -67,6 +67,7 @@ export default {
 @import 'sass/05_objects/sortbar.sass'
 @import 'sass/05_objects/toolbar.sass'
 @import 'sass/05_objects/footer.sass'
+@import 'sass/05_objects/mobileNav.sass'
 @import 'sass/05_objects/transitions.sass'
 @import 'sass/06_components/portfolioItem.sass'
 @import 'sass/06_components/about.sass'

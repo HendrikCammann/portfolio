@@ -39,7 +39,8 @@ export const store = new Vuex.Store({
     projectsContentful: portfolioItemsContentful,
     actualProject: null,
     appState: {
-      showNavBar: false
+      showNavBar: false,
+      showMobileNav: true
     }
   },
   getters: {
@@ -50,6 +51,14 @@ export const store = new Vuex.Store({
     showNavBar: state => {
       state.appState.showNavBar = true;
       return state.appState.showNavBar
+    },
+    hideMobileNavBar: state => {
+      state.appState.showMobileNav = false;
+      return state.appState.showMobileNav
+    },
+    showMobileNavBar: state => {
+      state.appState.showMobileNav = true;
+      return state.appState.showMobileNav
     }
   }
 });

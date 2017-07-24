@@ -5,6 +5,7 @@
         <app-navigation v-show="this.$store.state.appState.showNavBar"></app-navigation>
       </transition>
       <app-background :title="pageTitle" :subtitle="pageSubTitle" :needMarginBottom="true"></app-background>
+      <app-nav></app-nav>
     </section>
     <section>
       <div class="c-aboutItem">
@@ -63,6 +64,7 @@
   import _navigation from '../../partials/_navigation.vue'
   import _footer from '../../partials/_footer.vue'
   import _contactItem from '../../partials/_contactItem.vue'
+  import _mobileNav from '../../partials/_mobileNav.vue'
   import _skillItem from '../../partials/_skillItem.vue'
   import { eventBus } from '../../main.js'
 
@@ -72,6 +74,7 @@
         pageTitle: 'about',
         pageSubTitle: ' ',
         showMenu: false,
+        navanimation: 'slide-up',
         animation: 'slide-down',
         contactItems: [
           {
@@ -158,6 +161,7 @@
       appNavigation: _navigation,
       appContactItem: _contactItem,
       appSkillItem: _skillItem,
+      appNav: _mobileNav,
       appFooter: _footer
     },
     methods: {

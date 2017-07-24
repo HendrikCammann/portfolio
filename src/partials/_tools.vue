@@ -3,7 +3,7 @@
     <img @click="toggleItem($event)" title="Print" id="print" class="o-toolbar__icon" src="../assets/print.svg" />
     <a v-if="showShare" :href="facebookShare" target="_blank"><img @click="toggleItem($event)" title="Share on facebook" id="fb" class="o-toolbar__icon" src="../assets/Facebook.svg" /></a>
     <a v-if="showShare" :href="twitterShare" target="_blank"><img @click="toggleItem($event)" title="Share on twitter" id="twitter" class="o-toolbar__icon" src="../assets/Twitter.svg" /></a>
-    <a v-if="showShare" :href="pinterestShare" target="_blank"><img @click="toggleItem($event)" title="Share on twitter" id="pinterest" class="o-toolbar__icon" src="../assets/Pinterest.svg" /></a>
+    <a v-if="showShare" :href="pinterestShare" target="_blank"><img @click="toggleItem($event)" title="Share on pinterest" id="pinterest" class="o-toolbar__icon" src="../assets/Pinterest.svg" /></a>
     <img @click="toggleItem($event)" title="Share" id="share" v-bind:class="{'o-toolbar__icon--active': showShare}" class="o-toolbar__icon" src="../assets/share.svg" />
     <a :href="'mailto:?subject=' + emailText + '&amp;body=' + emailBody">
       <img @click="toggleItem($event)" title="Mail" id="mail" class="o-toolbar__icon" src="../assets/Mail.svg" />
