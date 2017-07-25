@@ -37,6 +37,14 @@
                     {{ item.detailText }}
                   </div>
                 </div>
+                <div class="column is-12 c-detail__baseStyles has-text-centered o-box__shadow">
+                  <p class="c-detail__baseStyles--headline font--bold">Tags</p>
+                  <div class="has-text-centered font--light margin__top--25">
+                    <span v-for="tag in item.tags" class="tag c-detail__baseStyles--tag">
+                      {{ tag }}
+                    </span>
+                  </div>
+                </div>
                 <div v-if="item.teamMembers != null || item.teamMembers != undefined" class="column is-12 c-detail__baseStyles has-text-centered o-box__shadow">
                   <p class="c-detail__baseStyles--headline font--bold">Team Members</p>
                   <div class="has-text-centered c-detail__baseStyles--members font--light">
