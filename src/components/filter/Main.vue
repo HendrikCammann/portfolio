@@ -4,14 +4,14 @@
       <transition :name="animation">
         <app-navigation v-show="this.$store.state.appState.showNavBar"></app-navigation>
       </transition>
-      <app-background :title="$store.state.actualTag" :subtitle="title" :needMarginBottom="false"></app-background>
+      <app-background :title="$route.params.tagName" :subtitle="title" :needMarginBottom="false"></app-background>
       <app-nav></app-nav>
     </section>
     <section class="c-detail__container margin__top--100 c-filter">
       <div class="container">
         <div class="columns max-width is-multiline">
           <div class="column is-12">
-            <h3 class="title is-3">More projects tagged with "{{ $store.state.actualTag }}"</h3>
+            <h3 class="title is-3">More projects tagged with "{{ $route.params.tagName }}"</h3>
           </div>
         </div>
 
@@ -65,10 +65,56 @@
       }
     },
     created () {
-      let that = this
+      const that = this;
+      if(this.$store.state.projectsContentful.length === 0) {
+        // console.log('error')
+        const contentful = require('contentful');
+
+        const client = contentful.createClient({
+          space: 'mlklkjoz7ftz',
+          accessToken: 'd4b202cc4bcdac7907296436737f7a969ac5559c0af18799c12e2e1154dcc260',
+        });
+
+        let portfolioItemsContentful = [];
+        client.getEntries({
+          // order: 'fields.publishDate'
+        })
+        .then(function (entries) {
+          // log the title for all the entries that have it
+          // console.log(portfolioItemsContentful)
+          entries.items.forEach(function (entry) {
+            if(entry.fields) {
+              portfolioItemsContentful.push(entry.fields)
+              // console.log(entry.fields)
+            }
+          })
+
+          portfolioItemsContentful.sort(function(a, b) {
+            return parseInt(a.projectNumber) - parseInt(b.projectNumber);
+          });
+          portfolioItemsContentful.reverse();
+
+          that.$store.state.projectsContentful = portfolioItemsContentful
+
+          for(let i = 0; i < that.$store.state.projectsContentful.length; i++) {
+            for(let j = 0; j < that.$store.state.projectsContentful[i].tags.length; j++) {
+              if(that.$store.state.projectsContentful[i].tags[j] === that.$route.params.tagName) {
+                that.items.push(that.$store.state.projectsContentful[i])
+                break;
+              }
+            }
+          }
+          eventBus.$on('navigationEvent', () => {
+            this.animation = 'slide-up';
+            this.$store.getters.hideNavBar;
+          });
+          this.animation = 'slide-down';
+          setTimeout(this.showMenuFunc, 1000);
+        })
+      } else {
       for(let i = 0; i < that.$store.state.projectsContentful.length; i++) {
         for(let j = 0; j < that.$store.state.projectsContentful[i].tags.length; j++) {
-          if(that.$store.state.projectsContentful[i].tags[j] === that.$store.state.actualTag) {
+          if(that.$store.state.projectsContentful[i].tags[j] === that.$route.params.tagName) {
             that.items.push(that.$store.state.projectsContentful[i])
             break;
           }
@@ -80,6 +126,7 @@
       });
       this.animation = 'slide-down';
       setTimeout(this.showMenuFunc, 1000);
+    }
     }
   }
 </script>

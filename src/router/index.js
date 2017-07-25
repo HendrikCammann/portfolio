@@ -39,7 +39,7 @@ export default new Router({
       component: Detail,
     },
     {
-      path: '/filter',
+      path: '/filter/:tagName',
       name: 'filter',
       component: Filter,
     }

@@ -111,7 +111,7 @@
       searchTag ($event) {
         this.$store.state.actualTag = $event.toElement.innerText
         this.$router.push({
-          path: '/filter'
+          path: '/filter/' + $event.toElement.innerText
         });
         eventBus.$emit('navigationEvent');
       },
