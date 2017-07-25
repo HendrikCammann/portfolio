@@ -38,6 +38,7 @@ export const store = new Vuex.Store({
     // projects: PortfolioItems.items,
     projectsContentful: portfolioItemsContentful,
     actualProject: null,
+    actualTag: null,
     appState: {
       showNavBar: false,
       showMobileNav: true

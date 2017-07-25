@@ -53,6 +53,12 @@
         this.leftNav.path = '/portfolio';
         this.rightNav.display = false;
       }
+      if(this.$route.name === 'filter') {
+        this.leftNav.display = true;
+        this.leftNav.name = this.$store.state.actualProject.name;
+        this.leftNav.path = '/project/' + this.$store.state.actualProject.name.replace(/\s/g, '')
+        this.rightNav.display = false;
+      }
     }
   };
 </script>

@@ -31,6 +31,9 @@ export default {
         case 'detail':
           this.activeItem = 4;
           break;
+        case 'filter':
+          this.activeItem = 5;
+          break;
       }
       if (this.lastActiveItem < this.activeItem) {
         this.animation = 'slide-left'

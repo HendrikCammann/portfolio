@@ -40,7 +40,7 @@
                 <div class="column is-12 c-detail__baseStyles has-text-centered o-box__shadow">
                   <p class="c-detail__baseStyles--headline font--bold">Tags</p>
                   <div class="has-text-centered font--light margin__top--25">
-                    <span v-for="tag in item.tags" class="tag c-detail__baseStyles--tag">
+                    <span @click="searchTag($event)" v-for="tag in item.tags" class="tag c-detail__baseStyles--tag">
                       {{ tag }}
                     </span>
                   </div>
@@ -108,6 +108,13 @@
       appFooter: _footer
     },
     methods: {
+      searchTag ($event) {
+        this.$store.state.actualTag = $event.toElement.innerText
+        this.$router.push({
+          path: '/filter'
+        });
+        eventBus.$emit('navigationEvent');
+      },
       toggleModal ($event) {
         console.log($event.toElement.currentSrc)
         if ($event.toElement.currentSrc) {
