@@ -74,9 +74,13 @@
       font-size: $font__size--text
       margin: 2px 2px
       color: $black
+      transition: transform 300ms ease-in-out
 
       &:hover
         cursor: pointer
+        background-color: $mainColor
+        transform: scale(1.05)
+        color: $white
 
     &--url
       color: $mainColor

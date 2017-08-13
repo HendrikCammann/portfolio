@@ -143,7 +143,8 @@
       }
     },
     created() {
-      const that = this
+      const that = this;
+      window.scroll(0, 0);
       if(this.$store.state.projectsContentful.length === 0) {
         // console.log('error')
         const contentful = require('contentful');

@@ -85,4 +85,7 @@
 </script>
 
 <style lang="sass" scoped>
+@media screen and (min-width: 769px)
+  .c-portfolioItem__column img[lazy=loading]
+    margin-left: 200px
 </style>

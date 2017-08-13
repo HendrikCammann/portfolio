@@ -11,7 +11,7 @@
       <div class="container">
         <div class="columns max-width is-multiline">
           <div class="column is-12">
-            <h3 class="title is-3">More projects tagged with "{{ $route.params.tagName }}"</h3>
+            <h3 class="title is-3">Projects tagged with <span class="tag is-large font--bold">{{ $route.params.tagName }}</span></h3>
           </div>
         </div>
 
@@ -131,13 +131,20 @@
   }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
+.tag
+  margin-bottom: 5px
+
 .c-filter__project
   text-align: center
+
+  &:hover
+    cursor: pointer
 
 .c-filter__project--name
   text-align: left
   text-transform: uppercase
+  margin-bottom: 10px
 
 .c-filter__project--img
   max-height: 200px

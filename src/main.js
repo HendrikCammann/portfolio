@@ -10,6 +10,7 @@ export const eventBus = new Vue()
 Vue.use(VueLazyload, {
   preLoad: 1.3,
   // loading: '/Users/hendrikcammann/Documents/Development/web/portfolio_vue/src/assets/Spinner.svg',
+  loading: require('./assets/Spinner.svg'),
   attempt: 1,
   // the default is ['scroll', 'wheel', 'mousewheel', 'resize', 'animationend', 'transitionend']
   listenEvents: [ 'scroll' ]
